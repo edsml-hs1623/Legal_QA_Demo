@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legal-qa-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: legal-qa
+  template:
+    metadata:
+      labels:
+        app: legal-qa
+    spec:
+      containers:
+      - name: legal-qa
+        image: gcr.io/YOUR_PROJECT_ID/legal-qa:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "2Gi"
+          limits:
+            cpu: "1"
+            memory: "4Gi"
