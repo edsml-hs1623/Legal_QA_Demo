@@ -22,14 +22,15 @@ Evalulation and Deployment
 
 ## Structure
 legal_qa/
-├── app/
-│   └── main.py
-├── legal_qa_model/
-├── Dockerfile
-├── requirements.txt
-├── README.md
-├── LICENSE
-└── start.sh
+- app/main.py
+-  legal_qa_model/
+-  Dockerfile
+-  requirements.txt
+-  README.md
+-  LICENSE
+-  start.sh
+- eks-deployment.ymal
+- eks-service.ymal
 
 ## Getting Started 
 
